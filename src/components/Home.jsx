@@ -1,26 +1,16 @@
 import React, { useState, useEffect } from "react";
-import pfp from "../assets/pfp.jpeg";
+import { Route, Router, Routes, Link } from "react-router-dom";
+import Products from "./Products";
+import Footer from "./Footer";
 import logo from "../assets/logo.jpg";
 import phone from "../assets/telephone.png";
 import whatsapp from "../assets/whatsapp.png";
 import gmail from "../assets/gmail.svg";
-import can from "../assets/can.jpg";
-import { Route, Router, Routes, Link } from "react-router-dom";
-import Footer from "./Footer";
 import location from "../assets/location1.png";
-import Products from "./Products";
+import pfp from "../assets/pfp.jpeg";
 
 function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const [selectedLocation, setSelectedLocation] = useState({
-    lat: 17.9501,
-    lng: 73.8853,
-  });
 
   const handleGmail = () => {
     const gmailAddress = "shindeharshal009@gmail.com";
@@ -39,7 +29,7 @@ function Home() {
       <div className="p-2 w-full pb-24 text-center bg-[#077bff] flex relative justify-center items-center">
         <div className="pt-2 flex gap-4 justify-center items-center">
           <img className="w-11 rounded-full" src={logo} alt="" />
-          <p className="text-white drop-shadow-lg font-bold text-2xl">
+          <p className="text-white drop-shadow-lg font-bold text-3xl">
             Vinox Technologies
           </p>
         </div>
@@ -52,6 +42,7 @@ function Home() {
       />
       <div className="mt-24 text-center">
         <p className="font-bold text-3xl text-[#077bff]">Ganesh Daund</p>
+        <p className="">Vinox Technologies</p>
         <p className="">Owner</p>
       </div>
 
@@ -101,6 +92,10 @@ function Home() {
           doloribus ab, porro pariatur saepe animi? Nam maxime cumque est
           molestias rem porro corrupti! In, reiciendis? ue maxime debitis sint
           dolore iste eius, dolorem explicabo facilis nemo illo voluptate
+          consequatur enim est molestias dolorum repellat ver maxime debitis
+          sint dolore iste eius, dolorem explicabo facilis nemo illo voluptate
+          consequatur enim est molestias dolorum repellat ver maxime debitis
+          sint dolore iste eius, dolorem explicabo facilis nemo illo voluptate
           consequatur enim est molestias dolorum repellat vero. Aut recusandae
           provident corpori
         </div>
@@ -110,6 +105,29 @@ function Home() {
 
       {/* Products  */}
       <Products />
+
+      <hr className="w-80 h-px bg-gray-700 border-0 rounded mx-auto my-4" />
+
+      {/* Core Values  */}
+      <div className="flex flex-col flex-wrap justify-center items-center text-center px-5 py-2 ">
+        <div className="text-3xl text-[#077bff] font-bold">Core Values</div>
+        <div className="p-5">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias quam
+          commodi unde sed nam eaque maxime debitis sint dolore iste eius,
+          dolorem explicabo facilis nemo illo voluptate consequatur enim est
+          molestias dolorum repellat vero. Aut recusandae provident corporis
+          quas quos illo officiis! Nisi eos eveniet eius dolore ducimus ipsa
+          doloribus ab, porro pariatur saepe animi? Nam maxime cumque est
+          molestias rem porro corrupti! In, reiciendis? ue maxime debitis sint
+          dolore iste eius, dolorem explicabo facilis nemo illo voluptate
+          consequatur enim est molestias dolorum repellat ver maxime debitis
+          sint dolore iste eius, dolorem explicabo facilis nemo illo voluptate
+          consequatur enim est molestias dolorum repellat ver maxime debitis
+          sint dolore iste eius, dolorem explicabo facilis nemo illo voluptate
+          consequatur enim est molestias dolorum repellat vero. Aut recusandae
+          provident corpori
+        </div>
+      </div>
 
       <hr className="w-80 h-px bg-gray-700 border-0 rounded mx-auto my-4" />
 
@@ -124,7 +142,7 @@ function Home() {
         <button
           onClick={handleMap}
           type="button"
-          className="flex justify-center items-center gap-2 text-white bg-blue-700 font-medium rounded-lg my-5 text-sm px-5 py-2.5 me-2 mb-2"
+          className="flex justify-center items-center gap-2 text-white bg-blue-700 font-medium rounded-lg my-5 text-sm px-5 py-2.5 me-2 mb-2 hover:scale-105"
         >
           <div>Get Direction</div>
           <img width={20} src={location} alt="" />

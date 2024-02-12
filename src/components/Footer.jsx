@@ -1,7 +1,4 @@
 import React from "react";
-import pfp from "../assets/pfp.jpg";
-import logo from "../assets/logo.jpg";
-import can from "../assets/can.jpg";
 import { Route, Router, Routes, Link } from "react-router-dom";
 import phone from "../assets/call1.png";
 import whatsapp from "../assets/whatsapp.png";
@@ -22,7 +19,7 @@ function Footer() {
 
   return (
     <div className="fixed bottom-0 w-full bg-[#077bff] text-[#f9ffff]">
-      <p className="p-2 flex justify-around">
+      <p className="p-2 flex justify-around sm:justify-center sm:gap-24">
         <button
           onClick={handleCall}
           target="_blank"
