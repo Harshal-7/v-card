@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Route, Router, Routes, Link } from "react-router-dom";
 import Products from "./Products";
 import Footer from "./Footer";
@@ -8,14 +8,45 @@ import whatsapp from "../assets/whatsapp.png";
 import gmail from "../assets/gmail.svg";
 import location from "../assets/location1.png";
 import pfp from "../assets/pfp.jpeg";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function Home() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const aboutRef = useRef();
+  const corevalRef = useRef();
+  gsap.registerPlugin(ScrollTrigger);
+
+  useGSAP(() => {
+    gsap.from(aboutRef.current, {
+      scrollTrigger: {
+        trigger: aboutRef.current,
+      },
+      y: 50,
+      opacity: 0,
+      ease: "power1.out",
+      duration: 1,
+    });
+    gsap.from(corevalRef.current, {
+      scrollTrigger: {
+        trigger: corevalRef.current,
+        toggleActions: "restart none none none",
+      },
+      y: 50,
+      opacity: 0,
+      ease: "power1.out",
+      duration: 1.6,
+    });
+  }, {});
 
   const handleGmail = () => {
     const gmailAddress = "shindeharshal009@gmail.com";
     const mailtoLink = `mailto:${gmailAddress}?subject=Contact%20Me`;
     window.location.href = mailtoLink;
+  };
+
+  const handleCall = () => {
+    window.location.href = "tel:+02167265378";
   };
 
   const handleMap = () => {
@@ -59,13 +90,12 @@ function Home() {
           WhatsApp
         </Link>
 
-        <Link
-          to="https://github.com/Harshal-7"
-          target="_blank"
+        <button
+          onClick={handleCall}
           className="flex items-center hover:scale-110"
         >
           <img src={phone} className="h-7 mr-4" alt="github" /> +02167265378
-        </Link>
+        </button>
 
         <button
           onClick={handleGmail}
@@ -81,7 +111,10 @@ function Home() {
       <hr className="w-80 h-px bg-gray-700 border-0 rounded mx-auto my-4" />
 
       {/* About us  */}
-      <div className="flex flex-col flex-wrap justify-center items-center text-center p-2 ">
+      <div
+        ref={aboutRef}
+        className="flex flex-col flex-wrap justify-center items-center text-center p-2 "
+      >
         <div className="text-3xl text-[#077bff] font-bold">About Us</div>
         <div className="p-5">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias quam
@@ -109,7 +142,10 @@ function Home() {
       <hr className="w-80 h-px bg-gray-700 border-0 rounded mx-auto my-4" />
 
       {/* Core Values  */}
-      <div className="flex flex-col flex-wrap justify-center items-center text-center px-5 py-2 ">
+      <div
+        ref={corevalRef}
+        className="flex flex-col flex-wrap justify-center items-center text-center px-5 py-2 "
+      >
         <div className="text-3xl text-[#077bff] font-bold">Core Values</div>
         <div className="p-5">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias quam
