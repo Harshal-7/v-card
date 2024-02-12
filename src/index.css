@@ -12,12 +12,14 @@ font-family: 'Bespoke Stencil', sans-serif;
 font-family: 'Britney', cursive;
 */
 
+html,
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   background-color: #0c0c0c;
   font-family: "General Sans", sans-serif;
+  overflow-x: hidden;
 }
 
 /* 

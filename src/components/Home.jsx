@@ -35,8 +35,8 @@ function Home() {
   };
 
   return (
-    <div className="max-w-96 m-auto flex flex-col bg-[#181717] text-white items-center relative">
-      <div className="p-2 min-w-96 pb-24 text-center bg-[#077bff] flex relative justify-center items-center">
+    <div className="max-w-screen-sm m-auto flex flex-col bg-[#181717] text-white items-center relative">
+      <div className="p-2 w-full pb-24 text-center bg-[#077bff] flex relative justify-center items-center">
         <div className="pt-2 flex gap-4 justify-center items-center">
           <img className="w-11 rounded-full" src={logo} alt="" />
           <p className="text-white drop-shadow-lg font-bold text-2xl">
@@ -46,7 +46,7 @@ function Home() {
       </div>
 
       <img
-        className="w-40 h-40 object-cover rounded-full border-2 border-white absolute top-20"
+        className="w-40 h-40 object-cover rounded-full border-2 border-white absolute top-20 hover:scale-105"
         src={pfp}
         alt="img"
       />
@@ -62,7 +62,7 @@ function Home() {
         <Link
           to="https://wa.me/+919763533588"
           target="_blank"
-          className="flex items-center"
+          className="flex items-center hover:scale-110"
         >
           <img src={whatsapp} className="h-7 mr-4 sm:h-8" alt="github" />{" "}
           WhatsApp
@@ -71,7 +71,7 @@ function Home() {
         <Link
           to="https://github.com/Harshal-7"
           target="_blank"
-          className="flex items-center"
+          className="flex items-center hover:scale-110"
         >
           <img src={phone} className="h-7 mr-4" alt="github" /> +02167265378
         </Link>
@@ -79,7 +79,7 @@ function Home() {
         <button
           onClick={handleGmail}
           target="_blank"
-          className="flex items-center"
+          className="flex items-center hover:scale-110"
         >
           <img src={gmail} className="h-7 mr-4" alt="gmail" />{" "}
           shindeharshal009@gmail.com

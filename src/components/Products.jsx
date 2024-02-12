@@ -23,10 +23,10 @@ function Products() {
     <div className="flex flex-col flex-wrap justify-center items-center p-2">
       <div className="text-3xl text-[#077bff] font-bold mb-2">Products</div>
       <div className="p-4 text-black">
-        {products.map((val) => (
-          <div className="mb-4 bg-gray-100 rounded-lg">
+        {products.map((val, index) => (
+          <div key={index} className="mb-4 bg-gray-100 rounded-lg">
             <div className="py-4 text-center text-xl">{val.name}</div>
-            <div className="px-5">
+            <div className="">
               <img src={val.img} alt="" />
             </div>
             <div className="flex flex-col gap-4 py-4 px-10">
