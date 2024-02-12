@@ -2,11 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+font-family: 'General Sans', sans-serif;
+font-family: 'Cabinet Grotesk', sans-serif;
+font-family: 'Chillax', sans-serif;
+font-family: 'JetBrains Mono', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Bespoke Stencil', sans-serif;
+font-family: 'Britney', cursive;
+*/
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: black;
+  background-color: #0c0c0c;
+  font-family: "General Sans", sans-serif;
 }
 
 /* 
@@ -16,7 +27,7 @@ body {
 #f0f2f3	#272f3b	#00a2fb	white-black-blue
 
 
-#f9ffff	#24272c	#e75427	white-black-orange
+#f9ffff	#c	#e75427	white-black-orange
 
 
 #f5f9f9	#1f2c3f	white-darkish_blue		

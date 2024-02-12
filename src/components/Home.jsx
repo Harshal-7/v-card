@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import pfp from "../assets/pfp.jpg";
+import pfp from "../assets/pfp.jpeg";
 import logo from "../assets/logo.jpg";
 import phone from "../assets/telephone.png";
 import whatsapp from "../assets/whatsapp.png";
@@ -46,7 +46,7 @@ function Home() {
       </div>
 
       <img
-        className="w-40 rounded-full border-2 border-white absolute top-20"
+        className="w-40 h-40 object-cover rounded-full border-2 border-white absolute top-20"
         src={pfp}
         alt="img"
       />
