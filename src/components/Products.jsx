@@ -16,7 +16,7 @@ function Products() {
         {products.map((val, index) => (
           <div
             key={index}
-            className="mb-4 bg-gray-100 rounded-lg hover:shadow-[6px_6px_12px_0px_#4a5568]"
+            className="mb-4 bg-gray-300 rounded-lg hover:shadow-[6px_6px_12px_0px_#4a5568]"
           >
             <div className="py-4 text-center text-2xl">{val.name}</div>
             <div className="">
