@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black;
+}
+
+/* 
+
+#f0f2f3	#2e235e	#b92a0d	white-blue-red
+#f0f2f3	#353432	#349b98	white-balck-greenish
+#f0f2f3	#272f3b	#00a2fb	white-black-blue
+
+
+#f9ffff	#24272c	#e75427	white-black-orange
+
+
+#f5f9f9	#1f2c3f	white-darkish_blue		
+#f5f9f9	#4e2f43	white-maroon
+
+#fffdff	#414343	white-black
+#fffdff	#2a2929	white-dark_black 
+
+*/
