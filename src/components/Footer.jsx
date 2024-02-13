@@ -8,13 +8,13 @@ import homebtn from "../assets/home.png";
 
 function Footer() {
   const handleGmail = () => {
-    const gmailAddress = "shindeharshal009@gmail.com";
+    const gmailAddress = "vimal.entpr@gmail.com";
     const mailtoLink = `mailto:${gmailAddress}?subject=Contact%20Me`;
     window.location.href = mailtoLink;
   };
 
   const handleCall = () => {
-    window.location.href = "tel:+919763533588";
+    window.location.href = "tel:+919146203040";
   };
 
   return (
@@ -29,7 +29,7 @@ function Footer() {
         </button>
 
         <Link
-          to="https://wa.me/+919763533588"
+          to="https://wa.me/+919146203040"
           target="_blank"
           className="flex items-center hover:scale-110"
         >

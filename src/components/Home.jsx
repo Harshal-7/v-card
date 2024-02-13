@@ -3,7 +3,7 @@ import { Route, Router, Routes, Link } from "react-router-dom";
 import Products from "./Products";
 import Footer from "./Footer";
 import logo from "../assets/logo.jpg";
-import phone from "../assets/telephone.png";
+import phone from "../assets/call1.png";
 import whatsapp from "../assets/whatsapp.png";
 import gmail from "../assets/gmail.svg";
 import location from "../assets/location1.png";
@@ -17,6 +17,7 @@ function Home() {
   const corevalRef = useRef();
   gsap.registerPlugin(ScrollTrigger);
 
+  // animations
   useGSAP(() => {
     gsap.from(aboutRef.current, {
       scrollTrigger: {
@@ -39,16 +40,15 @@ function Home() {
     });
   }, {});
 
+  // handling mail, phone & maps
   const handleGmail = () => {
-    const gmailAddress = "shindeharshal009@gmail.com";
+    const gmailAddress = "vimal.entpr@gmail.com";
     const mailtoLink = `mailto:${gmailAddress}?subject=Contact%20Me`;
     window.location.href = mailtoLink;
   };
-
   const handleCall = () => {
-    window.location.href = "tel:+02167265378";
+    window.location.href = "tel:+919850754652";
   };
-
   const handleMap = () => {
     const mapLink =
       "https://www.google.com/maps/place/Vinox+Technologies/@17.9798707,73.8874571,17z/data=!4m14!1m7!3m6!1s0x3bc25cfff3c3a357:0x871e263619e7bc3c!2sVinox+Technologies!8m2!3d17.980355!4d73.8900995!16s%2Fg%2F11dxpdm9sl!3m5!1s0x3bc25cfff3c3a357:0x871e263619e7bc3c!8m2!3d17.980355!4d73.8900995!16s%2Fg%2F11dxpdm9sl?entry=ttu";
@@ -57,6 +57,7 @@ function Home() {
 
   return (
     <div className="max-w-screen-sm m-auto flex flex-col bg-[#181717] text-white items-center relative">
+      {/* header logo + company name */}
       <div className="p-2 w-full pb-24 text-center bg-[#077bff] flex relative justify-center items-center">
         <div className="pt-2 flex gap-4 justify-center items-center">
           <img className="w-11 rounded-full" src={logo} alt="" />
@@ -66,6 +67,7 @@ function Home() {
         </div>
       </div>
 
+      {/* pfp + information about owner */}
       <img
         className="w-40 h-40 object-cover rounded-full border-2 border-white absolute top-20 hover:scale-105"
         src={pfp}
@@ -82,7 +84,7 @@ function Home() {
       {/* contactus  */}
       <div className="flex flex-col flex-wrap w-96 gap-5 justify-center items-center  p-2 mb-4">
         <Link
-          to="https://wa.me/+919763533588"
+          to="https://wa.me/+919146203040"
           target="_blank"
           className="flex items-center hover:scale-110"
         >
@@ -94,7 +96,7 @@ function Home() {
           onClick={handleCall}
           className="flex items-center hover:scale-110"
         >
-          <img src={phone} className="h-7 mr-4" alt="github" /> +02167265378
+          <img src={phone} className="h-7 mr-4" alt="github" /> +919146203040
         </button>
 
         <button
@@ -103,7 +105,7 @@ function Home() {
           className="flex items-center hover:scale-110"
         >
           <img src={gmail} className="h-7 mr-4" alt="gmail" />{" "}
-          shindeharshal009@gmail.com
+          vimal.entpr@gmail.com
           {/* change the handlegmail also */}
         </button>
       </div>
