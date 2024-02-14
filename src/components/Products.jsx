@@ -29,13 +29,13 @@ function Products() {
   ];
 
   return (
-    <div className="flex flex-col flex-wrap justify-center items-center p-2">
+    <div className="flex flex-col flex-wrap justify-center items-center px-8">
       <div className="text-3xl text-[#077bff] font-bold mb-2">Products</div>
-      <div ref={productsRef} className="px-8 py-4 text-black">
+      <div ref={productsRef} className="px-6 py-2 text-black mt-2">
         {products.map((val, index) => (
           <div
             key={index}
-            className="mb-4 bg-gray-300 rounded-lg hover:shadow-[6px_6px_12px_0px_#4a5568]"
+            className="mb-10 bg-gray-300 rounded-lg transition-all duration-500 hover:scale-105 ease-in-out box1"
           >
             <div className="py-4 text-center text-2xl">{val.name}</div>
             <div className="">
@@ -44,7 +44,7 @@ function Products() {
             <div className="flex flex-col gap-4 py-4 px-10">
               <button
                 type="button"
-                className="self-center w-1/2 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 text-white bg-blue-700 hover:scale-105 "
+                className="self-center font-medium rounded-md px-5 py-2 mb-2 text-white bg-blue-700 transition-all duration-300 hover:scale-105 hover:bg-blue-800"
               >
                 Enquiry
               </button>

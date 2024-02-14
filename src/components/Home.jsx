@@ -33,10 +33,10 @@ function Home() {
         trigger: corevalRef.current,
         toggleActions: "restart none none none",
       },
-      y: 50,
+      x: 50,
       opacity: 0,
       ease: "power1.out",
-      duration: 1.6,
+      duration: 1.5,
     });
   }, {});
 
@@ -69,7 +69,7 @@ function Home() {
 
       {/* pfp + information about owner */}
       <img
-        className="w-40 h-40 object-cover rounded-full border-2 border-white absolute top-20 hover:scale-105"
+        className="w-40 h-40 object-cover rounded-full border-2 border-white absolute top-20 transition-all duration-700 hover:scale-105"
         src={pfp}
         alt="img"
       />
@@ -82,11 +82,11 @@ function Home() {
       <hr className="w-80 h-px bg-gray-700 border-0 rounded mx-auto my-6" />
 
       {/* contactus  */}
-      <div className="flex flex-col flex-wrap w-96 gap-5 justify-center items-center  p-2 mb-4">
+      <div className="flex flex-col flex-wrap w-96 gap-5 justify-center items-center p-2 mb-4">
         <Link
           to="https://wa.me/+919146203040"
           target="_blank"
-          className="flex items-center hover:scale-110"
+          className="flex items-center transition-all duration-500 hover:scale-110"
         >
           <img src={whatsapp} className="h-7 mr-4 sm:h-8" alt="github" />{" "}
           WhatsApp
@@ -94,7 +94,7 @@ function Home() {
 
         <button
           onClick={handleCall}
-          className="flex items-center hover:scale-110"
+          className="flex items-center transition-all duration-500 hover:scale-110"
         >
           <img src={phone} className="h-7 mr-4" alt="github" /> +919146203040
         </button>
@@ -102,7 +102,7 @@ function Home() {
         <button
           onClick={handleGmail}
           target="_blank"
-          className="flex items-center hover:scale-110"
+          className="flex items-center transition-all duration-500 hover:scale-110"
         >
           <img src={gmail} className="h-7 mr-4" alt="gmail" />{" "}
           vimal.entpr@gmail.com
@@ -180,12 +180,13 @@ function Home() {
         <button
           onClick={handleMap}
           type="button"
-          className="flex justify-center items-center gap-2 text-white bg-blue-700 font-medium rounded-lg my-5 text-sm px-5 py-2.5 me-2 mb-2 hover:scale-105"
+          className="flex justify-center items-center gap-2 text-white bg-blue-700 font-medium rounded-lg my-5 text-sm px-5 py-2.5 me-2 mb-2 transition-all duration-500 hover:scale-105"
         >
           <div>Get Direction</div>
           <img width={20} src={location} alt="" />
         </button>
 
+        {/* maps iframe  */}
         <div className="p-4">
           <iframe
             className="px-8"
