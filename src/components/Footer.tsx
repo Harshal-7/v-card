@@ -14,7 +14,7 @@ const Footer = () => {
   };
 
   return (
-    <div className="fixed bottom-0 w-full bg-blue-800 text-[#f9ffff] max-w-screen-sm">
+    <div className="fixed bottom-0 bg-blue-800 text-[#f9ffff] w-full max-w-screen-sm overflow-x-hidden">
       <div className="flex justify-evenly sm:justify-center sm:gap-16 py-3 px-2 border-t border-[#313030]">
         <Button variant="link">
           <Link
@@ -51,12 +51,8 @@ const Footer = () => {
         </Button>
 
         <Button variant="link">
-          <Link
-            href="https://vinoxtechnologies.com"
-            target="_blank"
-            className="flex items-center transition-all duration-500 hover:scale-110"
-          >
-            <Image src="/Logo.png" alt="" width={60} height={60} />
+          <Link href="https://vinoxtechnologies.com" target="_blank">
+            <Image src="/Logo.png" alt="img" width={50} height={50} />
           </Link>
         </Button>
       </div>
