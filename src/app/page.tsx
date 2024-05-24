@@ -7,20 +7,11 @@ import { FaWhatsapp } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
 import { LuExternalLink } from "react-icons/lu";
-import Image from "next/image";
 import Products from "@/components/Products";
-import { Map, MapIcon, MapPinIcon } from "lucide-react";
+import { MapPinIcon } from "lucide-react";
+import Footer from "@/components/Footer";
 
 export default function Home() {
-  // handling mail, phone & maps
-  const handleGmail = () => {
-    const gmailAddress = "vimal.entpr@gmail.com";
-    const mailtoLink = `mailto:${gmailAddress}?subject=Contact%20Me`;
-    window.location.href = mailtoLink;
-  };
-  const handleCall = () => {
-    window.location.href = "tel:+919850754652";
-  };
   const handleMap = () => {
     const mapLink =
       "https://www.google.com/maps/place/Vinox+Technologies/@17.9798707,73.8874571,17z/data=!4m14!1m7!3m6!1s0x3bc25cfff3c3a357:0x871e263619e7bc3c!2sVinox+Technologies!8m2!3d17.980355!4d73.8900995!16s%2Fg%2F11dxpdm9sl!3m5!1s0x3bc25cfff3c3a357:0x871e263619e7bc3c!8m2!3d17.980355!4d73.8900995!16s%2Fg%2F11dxpdm9sl?entry=ttu";
@@ -173,8 +164,17 @@ export default function Home() {
         </div>
       </div>
       <hr className="w-80 h-px bg-gray-700 border-0 rounded mx-auto my-4" />
+
       {/* Products  */}
       <Products />
+      <Button variant="link">
+        <Link
+          href="https://www.vinoxtechnologies.com/products/homecare"
+          target="_blank"
+        >
+          More Products
+        </Link>
+      </Button>
       <hr className="w-80 h-px bg-gray-700 border-0 rounded mx-auto my-4" />
 
       {/* maps */}
@@ -208,7 +208,9 @@ export default function Home() {
         </div>
       </div>
       <hr className="w-80 h-px bg-gray-700 border-0 rounded mx-auto my-8" />
+
       {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

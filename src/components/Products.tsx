@@ -20,14 +20,14 @@ const Products = () => {
         {products.map((val, index) => (
           <div
             key={index}
-            className="mb-10 bg-white rounded-xl transition-all duration-500 hover:scale-105 ease-in-out "
+            className="mb-10 bg-white rounded-lg transition-all duration-500 hover:scale-105 ease-in-out "
           >
             <div className="p-4 text-center text-2xl font-bold">{val.name}</div>
             <div className="">
               <Image src={val.img} alt="" height={250} width={250} />
             </div>
             <div className="flex flex-col justify-center items-center gap-4 py-4 px-10">
-              <Button className="font-medium rounded-xl mb-2 text-white bg-blue-700 transition-all duration-300 hover:scale-105 hover:bg-blue-800">
+              <Button className="font-medium rounded-md mb-2 text-white bg-blue-700 transition-all duration-300 hover:scale-105 hover:bg-blue-800">
                 <Link href="https://www.vinoxtechnologies.com/contact">
                   Enquiry
                 </Link>
