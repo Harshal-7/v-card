@@ -21,17 +21,17 @@ export default function Home() {
   return (
     <div className="max-w-screen-sm m-auto flex flex-col bg-[#181717] text-white items-center relative">
       {/* header logo + company name */}
-      <div className="p-2 w-full pb-24 text-center bg-[#077bff] flex relative justify-center items-center">
-        <div className="pt-2 flex flex-col gap-4 justify-center items-center">
-          <p className="text-white drop-shadow-lg font-bold text-3xl sm:text-4xl text-center">
+      <div className="w-full text-center bg-gradient-to-r from-blue-800 to-blue-950 flex relative justify-center items-center">
+        <div className="pb-16 flex flex-col gap-4 justify-center items-center">
+          {/* <p className="text-white drop-shadow-lg font-bold text-3xl sm:text-4xl text-center">
             Vinox Technologies
-          </p>
-          <img className="w-32 sm:w-36" src="/Logo.jpg" alt="" />
+          </p> */}
+          <img className="w-80 sm:w-96" src="/Logo.png" alt="" />
         </div>
       </div>
       {/* pfp + information about owner */}
       <img
-        className="w-40 h-40 object-cover rounded-full border-2 border-white absolute top-40 transition-all duration-700 hover:scale-105"
+        className="w-36 sm:w-40 h-36 sm:h-40 object-cover rounded-full border-2 border-white absolute top-44 sm:top-52 transition-all duration-700 hover:scale-105"
         src="/pfp.jpeg"
         alt="img"
       />
@@ -42,7 +42,7 @@ export default function Home() {
       </div>
       <hr className="w-80 h-px bg-gray-700 border-0 rounded mx-auto my-6" />
       {/* contactus  */}
-      <div className="flex flex-col flex-wrap w-96 gap-5 justify-center items-center p-2 mb-4">
+      <div className="flex flex-col flex-wrap w-96 gap-3 justify-center items-center p-2 mb-4">
         <Button variant="link">
           <Link
             href="https://wa.me/+919146203040"
@@ -93,7 +93,7 @@ export default function Home() {
           {/* Introduction  */}
           <div className="flex flex-col px-5 py-2 ">
             <div>
-              <p className="mt-5">
+              <p className="">
                 Welcome to{" "}
                 <span className="text-[#077bff] font-semibold">
                   Vinox Technologies

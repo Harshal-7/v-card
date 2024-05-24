@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn("", inter.className)}>
+      <body className={cn("overflow-x-hidden", inter.className)}>
         {children}
         <Analytics />
       </body>
