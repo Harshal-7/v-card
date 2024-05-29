@@ -8,7 +8,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
 import { LuExternalLink } from "react-icons/lu";
 import Products from "@/components/Products";
-import { MapPinIcon } from "lucide-react";
+import { Linkedin, LinkedinIcon, MapPinIcon } from "lucide-react";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -55,14 +55,22 @@ export default function Home() {
 
         <Button variant="link">
           <Link
-            href="tel:+919850754652"
+            href="https://www.linkedin.com/in/ganesh-daund-77762914/"
             target="_blank"
             className="flex items-center transition-all duration-500 hover:scale-110"
           >
-            <FaPhoneAlt className="h-6 w-6 mr-4 sm:h-6 sm:w-6" /> +919850754652
+            <LinkedinIcon className="h-6 w-6 mr-4 sm:h-7 sm:w-7" /> LinkedIn
           </Link>
         </Button>
-
+        <Button variant="link">
+          <Link
+            href="tel:+919146203040"
+            target="_blank"
+            className="flex items-center transition-all duration-500 hover:scale-110"
+          >
+            <FaPhoneAlt className="h-6 w-6 mr-4 sm:h-6 sm:w-6" /> 9146203040
+          </Link>
+        </Button>
         <Button variant="link">
           <Link
             href="mailto:customercare@vinoxtechnologies.com"
@@ -73,7 +81,6 @@ export default function Home() {
             customercare@vinoxtechnologies.com
           </Link>
         </Button>
-
         <Button variant="link">
           <Link
             href="https://vinoxtechnologies.com"

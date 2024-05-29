@@ -18,7 +18,7 @@ const Footer = () => {
       <div className="flex justify-evenly sm:justify-center sm:gap-16 py-3 px-2 border-t border-[#313030]">
         <Button variant="link">
           <Link
-            href="tel:+919850754652"
+            href="tel:+919146203040"
             target="_blank"
             className="flex items-center transition-all duration-500 hover:scale-110"
           >
